@@ -1,0 +1,13 @@
+// products
+export const GET_PRODUCTS = "GET_PRODUCTS";
+export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const ADD_PRODUCT = "ADD_PRODUCT";
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+export const GET_SINGLE_PRODUCT = "GET_SINGLE_PRODUCT";
+
+// catalogs
+export const GET_CATALOGS = "GET_CATALOGS";
+export const DELETE_CATALOG = "DELETE_CATALOG";
+export const ADD_CATALOG = "ADD_CATALOG";
+export const UPDATE_CATALOG = "UPDATE_CATALOG";
+export const GET_SINGLE_CATALOG = "GET_SINGLE_CATALOG";
