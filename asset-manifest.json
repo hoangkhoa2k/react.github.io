@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/hoangkhoa2k/react.github.io/static/css/main.39aa688f.chunk.css",
-    "main.js": "/hoangkhoa2k/react.github.io/static/js/main.aa427841.chunk.js",
-    "main.js.map": "/hoangkhoa2k/react.github.io/static/js/main.aa427841.chunk.js.map",
-    "runtime-main.js": "/hoangkhoa2k/react.github.io/static/js/runtime-main.fda703bd.js",
-    "runtime-main.js.map": "/hoangkhoa2k/react.github.io/static/js/runtime-main.fda703bd.js.map",
-    "static/js/2.52e5a19b.chunk.js": "/hoangkhoa2k/react.github.io/static/js/2.52e5a19b.chunk.js",
-    "static/js/2.52e5a19b.chunk.js.map": "/hoangkhoa2k/react.github.io/static/js/2.52e5a19b.chunk.js.map",
-    "index.html": "/hoangkhoa2k/react.github.io/index.html",
-    "precache-manifest.afb9091c75a317fc43c0b6ba1ea814f1.js": "/hoangkhoa2k/react.github.io/precache-manifest.afb9091c75a317fc43c0b6ba1ea814f1.js",
-    "service-worker.js": "/hoangkhoa2k/react.github.io/service-worker.js",
-    "static/css/main.39aa688f.chunk.css.map": "/hoangkhoa2k/react.github.io/static/css/main.39aa688f.chunk.css.map",
-    "static/js/2.52e5a19b.chunk.js.LICENSE.txt": "/hoangkhoa2k/react.github.io/static/js/2.52e5a19b.chunk.js.LICENSE.txt"
+    "main.css": "/react.github.io/static/css/main.39aa688f.chunk.css",
+    "main.js": "/react.github.io/static/js/main.44d96e69.chunk.js",
+    "main.js.map": "/react.github.io/static/js/main.44d96e69.chunk.js.map",
+    "runtime-main.js": "/react.github.io/static/js/runtime-main.41f2e43a.js",
+    "runtime-main.js.map": "/react.github.io/static/js/runtime-main.41f2e43a.js.map",
+    "static/js/2.52e5a19b.chunk.js": "/react.github.io/static/js/2.52e5a19b.chunk.js",
+    "static/js/2.52e5a19b.chunk.js.map": "/react.github.io/static/js/2.52e5a19b.chunk.js.map",
+    "index.html": "/react.github.io/index.html",
+    "precache-manifest.cd6bc81907c0e19712fa73ec97df7d9b.js": "/react.github.io/precache-manifest.cd6bc81907c0e19712fa73ec97df7d9b.js",
+    "service-worker.js": "/react.github.io/service-worker.js",
+    "static/css/main.39aa688f.chunk.css.map": "/react.github.io/static/css/main.39aa688f.chunk.css.map",
+    "static/js/2.52e5a19b.chunk.js.LICENSE.txt": "/react.github.io/static/js/2.52e5a19b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fda703bd.js",
+    "static/js/runtime-main.41f2e43a.js",
     "static/js/2.52e5a19b.chunk.js",
     "static/css/main.39aa688f.chunk.css",
-    "static/js/main.aa427841.chunk.js"
+    "static/js/main.44d96e69.chunk.js"
   ]
 }
