@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import { DataContext } from '../../DataAsm';
+import {NavLink} from 'react-router-dom';
 
 function Productlike() {
     const value = useContext(DataContext)
@@ -56,7 +57,7 @@ function Productlike() {
                         <div className="col-xs-12"><h2 className="product-tieude">Sản Phẩm Yêu Thích</h2></div>
                     {/* <div className="col-xs-6">
                         <div className="pull-right"> 
-                        <a href="/" className="grid-style"><i className="icon-grid" /></a> <a href="/" className="list-style"><i className="icon-list" /></a> </div>
+                        <NavLink to="/" className="grid-style"><i className="icon-grid" /></NavLink> <NavLink to="/" className="list-style"><i className="icon-list" /></NavLink> </div>
                     </div> */}
                     </div>
                 </div>
@@ -69,11 +70,11 @@ function Productlike() {
                                 <div className="item-img"> <img className="img-1" src={`img/${product.images}`} alt="" /> 
                                 <div className="overlay">
                                     <div className="position-center-center">
-                                        <div className="inn"><a href={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></a> <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none"}} onClick={() => addCart(product.id)}><i className="icon-basket" /></button> <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none", padding:"10px"}} onClick={() => reductions(product.id)}><i className="icon-heart" /></button></div>
+                                        <div className="inn"><NavLink to={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></NavLink> <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none"}} onClick={() => addCart(product.id)}><i className="icon-basket" /></button> <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none", padding:"10px"}} onClick={() => reductions(product.id)}><i className="icon-heart" /></button></div>
                                     </div>
                                 </div>
                                 </div> 
-                                <div className="item-name"> <a href={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</a>
+                                <div className="item-name"> <NavLink to={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</NavLink>
                                 </div>
                                 <span className="price">{product.price.toLocaleString("en-GB")} VND</span>
                             </div>

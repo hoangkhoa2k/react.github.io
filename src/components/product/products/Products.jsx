@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react';
 import { DataContext } from '../../DataAsm';
+import {NavLink} from 'react-router-dom';
 
 export default function Products(props) {
     const value = useContext(DataContext)
@@ -72,7 +73,7 @@ export default function Products(props) {
                     <ul className="shop-cate">
                         {   
                             catalogs.map(catalog =>(
-                            <li key={catalog.id}><a href={`/category/${catalog.id}`}> {catalog.namecate} </a></li>
+                            <li key={catalog.id}><NavLink to={`/category/${catalog.id}`}> {catalog.namecate} </NavLink></li>
                             ))            
                         }
                     </ul>
@@ -92,7 +93,7 @@ export default function Products(props) {
                         <div className="col-xs-6"> <span className="product-num"></span> </div>
                         <div className="col-xs-6">
                         <div className="pull-right"> 
-                            <a href="#." className="grid-style"><i className="icon-grid" /></a> <a href="#." className="list-style"><i className="icon-list" /></a> </div>
+                            <NavLink to="#." className="grid-style"><i className="icon-grid" /></NavLink> <NavLink to="#." className="list-style"><i className="icon-list" /></NavLink> </div>
                         </div>
                     </div>
                     </div>
@@ -102,20 +103,20 @@ export default function Products(props) {
                             <div className="col-md-4" key={product.id}> 
                                 <div className={`item ${product.like}`}> 
                                     <div className="item-img">
-                                        <a href={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}> 
+                                        <NavLink to={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}> 
                                             <img className="img-1" src={`img/${product.images}`} alt="" />
-                                        </a>
+                                        </NavLink>
                                         <div className="overlay">
                                             <div className="position-center-center">
                                                 <div className="inn">
-                                                    <a href={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></a> 
+                                                    <NavLink to={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></NavLink> 
                                                     <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none"}} onClick={() => addCart(product.id)}><i className="icon-basket" /></button> 
                                                     <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none", padding:"10px"}} onClick={() => reductions(product.id)}><i className="icon-heart" /></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                <div className="item-name"> <a href={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</a></div>
+                                <div className="item-name"> <NavLink to={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</NavLink></div>
                                 <span className="price">{product.price.toLocaleString("en-GB")} VND</span>
                                 </div>
                             </div>

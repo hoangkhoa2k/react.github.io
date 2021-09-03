@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct, loadProducts } from '../../../actions/actions';
+import {NavLink} from 'react-router-dom';
 
 export default function Showproduct(props) {
     let dispatch = useDispatch();
@@ -57,11 +58,11 @@ export default function Showproduct(props) {
                     <div className="shop-sidebar"> 
                     <h5 className="shop-tittle margin-bottom-30">danh mục</h5>
                     <ul className="shop-cate">
-                        <li><a href="/admin-catalogs">Quản trị danh mục</a></li>
-                        <li><a href="/admin-products">Quản trị sản phẩm</a></li>
-                        <li><a href="/admin-users">Quản trị tài khoản</a></li>
-                        <li><a href="/admin-orders">Quản trị đơn hàng</a></li>
-                        <li><a href="/bangthongke">Thống kê</a></li>
+                        <li><NavLink to="/admin-catalogs">Quản trị danh mục</NavLink></li>
+                        <li><NavLink to="/admin-products">Quản trị sản phẩm</NavLink></li>
+                        <li><NavLink to="/admin-users">Quản trị tài khoản</NavLink></li>
+                        <li><NavLink to="/admin-orders">Quản trị đơn hàng</NavLink></li>
+                        <li><NavLink to="/bangthongke">Thống kê</NavLink></li>
                     </ul>
                     <div className="side-bnr margin-top-50"> <img className="img-responsive" src="https://product.hstatic.net/1000003969/product/xanh-bac-ha_tt07002_7_d15c2835805d463f93dc7fb7345af7f4.jpg" alt="" />
                         <div className="position-center-center"> <span className="price">1,999,000 VND</span>
@@ -82,9 +83,9 @@ export default function Showproduct(props) {
                         </div>
                         <div className="col-xs-6">
                         <div className="pull-right">  
-                            <a href="/create-products"><button className="suaxoa">Thêm sản phẩm</button></a>&ensp;&ensp;
+                            <NavLink to="/create-products"><button className="suaxoa">Thêm sản phẩm</button></NavLink>&ensp;&ensp;
                             <button className="suaxoa" style={{color:"black"}} onClick={()=>trolainhucu()}>Trở lại như cũ</button>
-                            <a href="#." className="grid-style"><i className="icon-grid" /></a> <a href="#." className="list-style"><i className="icon-list" /></a> </div>
+                            <NavLink to="#." className="grid-style"><i className="icon-grid" /></NavLink> <NavLink to="#." className="list-style"><i className="icon-list" /></NavLink> </div>
                         </div>
                     </div>
                 </div>
@@ -96,14 +97,14 @@ export default function Showproduct(props) {
                                 <div className="item-img"> <img className="img-1" src={`img/${product.images}`} alt="" />
                                     <div className="overlay">
                                     <div className="position-center-center">
-                                        <div className="inn"><a href={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></a></div>
+                                        <div className="inn"><NavLink to={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></NavLink></div>
                                     </div>
                                     </div>
                                 </div>
-                                <div className="item-name"> <a href={`/product-details/${product.id}`}>{product.title}</a>
+                                <div className="item-name"> <NavLink to={`/product-details/${product.id}`}>{product.title}</NavLink>
                                 </div>
                                 <span className="price">{product.price.toLocaleString("en-GB")} VND</span> 
-                                <a href={`/edit-products/${product.id}`}><button style={{width:"125px", marginLeft:"-5px"}} className="suaxoa">Sửa</button></a><button style={{width:"125px", marginLeft:"5px"}} className="suaxoa" onClick={()=>xoapro(product.id)}>Xóa</button>
+                                <NavLink to={`/edit-products/${product.id}`}><button style={{width:"125px", marginLeft:"-5px"}} className="suaxoa">Sửa</button></NavLink><button style={{width:"125px", marginLeft:"5px"}} className="suaxoa" onClick={()=>xoapro(product.id)}>Xóa</button>
                                 </div>
                             </div>
                         ))            
