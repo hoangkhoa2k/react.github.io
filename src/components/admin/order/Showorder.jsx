@@ -20,7 +20,7 @@ export default function Showorder() {
 
     const xoaorder = (id) => {
         if (window.confirm("Bạn thực sự muốn xóa đơn hàng này?")) {
-            fetch(`http://localhost:3000/orders/${id}`,{
+            fetch(`https://json-server-hkhoa.herokuapp.com/orders/${id}`,{
                 method: 'DELETE',
                 headers: {
                     'Accept':'application/json',

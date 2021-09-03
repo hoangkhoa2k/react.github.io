@@ -11,7 +11,7 @@ export default function Edituser() {
         Role: ""
     });
     useEffect(() => {
-        fetch(`http://localhost:3000/users/${id}`)
+        fetch(`https://json-server-hkhoa.herokuapp.com/users/${id}`)
             .then(res=>{
                 return res.json();
             })
@@ -34,7 +34,7 @@ export default function Edituser() {
                             Password: details.Password,
                             role: 1
                         })
-                        fetch(`http://localhost:3000/users/${id}`,{
+                        fetch(`https://json-server-hkhoa.herokuapp.com/users/${id}`,{
                             method: 'PUT',
                             headers: {
                                 'Accept':'application/json',
@@ -57,7 +57,7 @@ export default function Edituser() {
                             Password: details.Password,
                             role: 0
                         })
-                        fetch(`http://localhost:3000/users/${id}`,{
+                        fetch(`https://json-server-hkhoa.herokuapp.com/users/${id}`,{
                             method: 'PUT',
                             headers: {
                                 'Accept':'application/json',

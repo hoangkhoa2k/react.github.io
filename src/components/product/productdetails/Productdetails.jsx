@@ -36,7 +36,7 @@ export default function Productdetails() {
                     idsp:id,
                     Date: dateTime
                 })
-                fetch(`http://localhost:3000/comments`,{
+                fetch(`https://json-server-hkhoa.herokuapp.com/comments`,{
                         method: 'POST',
                         headers: {
                             'Accept':'application/json',
@@ -63,7 +63,7 @@ export default function Productdetails() {
                     idsp:id,
                     Date: dateTime
                 })
-                fetch(`http://localhost:3000/comments`,{
+                fetch(`https://json-server-hkhoa.herokuapp.com/comments`,{
                         method: 'POST',
                         headers: {
                             'Accept':'application/json',
@@ -83,7 +83,7 @@ export default function Productdetails() {
     };
 
     useEffect(()=>{
-        fetch('http://localhost:3000/products?id='+id)
+        fetch('https://json-server-hkhoa.herokuapp.com/products?id='+id)
             .then(res=>{
                 return res.json();
             })

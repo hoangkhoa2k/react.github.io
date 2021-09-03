@@ -20,7 +20,7 @@ export default function Showuser() {
 
     const xoauser = (id) => {
         if (window.confirm("Bạn thực sự muốn xóa tài khoản này?")) {
-            fetch(`http://localhost:3000/users/${id}`,{
+            fetch(`https://json-server-hkhoa.herokuapp.com/users/${id}`,{
                 method: 'DELETE',
                 headers: {
                     'Accept':'application/json',

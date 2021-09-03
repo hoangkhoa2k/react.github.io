@@ -5,7 +5,7 @@ export default function Profile(props) {
     const {id} = useParams()
     const [userss, setuserss] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:3000/users/${id}`)
+        fetch(`https://json-server-hkhoa.herokuapp.com/users/${id}`)
             .then(res=>{
                 return res.json();
             })

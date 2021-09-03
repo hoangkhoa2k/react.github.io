@@ -27,7 +27,7 @@ export default function Createcatalog(props) {
             const offff = ({
                 namecate: details.namecates
             })
-            fetch(`http://localhost:3000/catalogs`,{
+            fetch(`https://json-server-hkhoa.herokuapp.com/catalogs`,{
                 method: 'POST',
                 headers: {
                     'Accept':'application/json',

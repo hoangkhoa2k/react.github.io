@@ -29,7 +29,7 @@ const getCatalogs = (catalogs) => ({
 
 export const loadProducts = () => {
   return function (dispatch) {
-      fetch('http://localhost:3000/products')
+      fetch('https://json-server-hkhoa.herokuapp.com/products')
       .then(res=>{
           return res.json();
       })
@@ -42,7 +42,7 @@ export const loadProducts = () => {
 
 export const deleteProduct = (id) => {
   return function (dispatch) {
-    fetch(`http://localhost:3000/products/${id}`,{
+    fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
           method: 'DELETE',
           headers: {
               'Accept':'application/json',
@@ -64,7 +64,7 @@ export const deleteProduct = (id) => {
 
 export const addProduct = (product) => {
   return function (dispatch) {
-      fetch(`http://localhost:3000/products`,{
+      fetch(`https://json-server-hkhoa.herokuapp.com/products`,{
           method: 'POST',
           headers: {
               'Accept':'application/json',
@@ -86,7 +86,7 @@ export const addProduct = (product) => {
 
 export const addcatalogs = (catalog) => {
   return function (dispatch) {
-      fetch(`http://localhost:3000/catalogs`,{
+      fetch(`https://json-server-hkhoa.herokuapp.com/catalogs`,{
           method: 'POST',
           headers: {
               'Accept':'application/json',
@@ -106,7 +106,7 @@ export const addcatalogs = (catalog) => {
 
 export const getSingleProduct = (id) => {
   return function (dispatch) {
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`)
       .then(res=>{
       return res.json();
       })
@@ -120,7 +120,7 @@ export const getSingleProduct = (id) => {
 
 export const getProductbyidcatalog = (id) => {
   return function (dispatch) {
-    fetch(`http://localhost:3000/products?idcate=${id}`)
+    fetch(`https://json-server-hkhoa.herokuapp.com/products?idcate=${id}`)
       .then(res=>{
       return res.json();
       })
@@ -133,7 +133,7 @@ export const getProductbyidcatalog = (id) => {
 
 export const updateProduct = (product, id) => {
   return function (dispatch) {
-      fetch(`http://localhost:3000/products/${id}`,{
+      fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
           method: 'PUT',
           headers: {
               'Accept':'application/json',
@@ -155,7 +155,7 @@ export const updateProduct = (product, id) => {
 // catalog
 export const loadCatalogs = () => {
   return function (dispatch2) {
-      fetch('http://localhost:3000/catalogs')
+      fetch('https://json-server-hkhoa.herokuapp.com/catalogs')
       .then(res=>{
           return res.json();
       })

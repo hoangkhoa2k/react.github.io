@@ -20,7 +20,7 @@ function Productlike() {
             }
         })
         setLike([...like])
-        fetch(`http://localhost:3000/products/${id}`,{
+        fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
             method: 'PUT',
             headers: {
                 'Accept':'application/json',
@@ -36,7 +36,7 @@ function Productlike() {
                 gg.view+=1
             }
         })
-        fetch(`http://localhost:3000/products/${id}`,{
+        fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
             method: 'PUT',
             headers: {
                 'Accept':'application/json',

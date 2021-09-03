@@ -5,7 +5,7 @@ export default function Inhd(props) {
     const {id} = useParams();
     const [hd, sethd] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:3000/orders/${id}`)
+        fetch(`https://json-server-hkhoa.herokuapp.com/orders/${id}`)
             .then(res=>{
                 return res.json();
             })

@@ -35,7 +35,7 @@ export default function Products(props) {
             }
         })
         setLike([...like])
-        fetch(`http://localhost:3000/products/${id}`,{
+        fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
             method: 'PUT',
             headers: {
                 'Accept':'application/json',
@@ -51,7 +51,7 @@ export default function Products(props) {
                 gg.view+=1
             }
         })
-        fetch(`http://localhost:3000/products/${id}`,{
+        fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
             method: 'PUT',
             headers: {
                 'Accept':'application/json',

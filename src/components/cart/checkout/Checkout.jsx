@@ -54,7 +54,7 @@ export default function Checkout() {
                         Email: dataUsers.Email,
                         Total: total
                     })
-                    fetch(`http://localhost:3000/orders`,{
+                    fetch(`https://json-server-hkhoa.herokuapp.com/orders`,{
                         method: 'POST',
                         headers: {
                             'Accept':'application/json',
@@ -88,7 +88,7 @@ export default function Checkout() {
                         Email: details.Email,
                         Total: total
                     })
-                    fetch(`http://localhost:3000/orders`,{
+                    fetch(`https://json-server-hkhoa.herokuapp.com/orders`,{
                         method: 'POST',
                         headers: {
                             'Accept':'application/json',

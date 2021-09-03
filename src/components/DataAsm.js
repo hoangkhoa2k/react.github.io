@@ -9,7 +9,7 @@ export const DataAsm = (props) => {
     const [products, setProducts] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:3000/products')
+        fetch('https://json-server-hkhoa.herokuapp.com/products')
             .then(res=>{
                 return res.json();
             })
@@ -22,7 +22,7 @@ export const DataAsm = (props) => {
     const [catalogs, setCatalogs] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:3000/catalogs')
+        fetch('https://json-server-hkhoa.herokuapp.com/catalogs')
             .then(res=>{
                 return res.json();
             })
@@ -34,7 +34,7 @@ export const DataAsm = (props) => {
     //user
     const [adminUser, setadminUser] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3000/users')
+        fetch('https://json-server-hkhoa.herokuapp.com/users')
             .then(res=>{
                 return res.json();
             })
@@ -46,7 +46,7 @@ export const DataAsm = (props) => {
     // comment
     const [adminComment, setadminComment] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3000/comments')
+        fetch('https://json-server-hkhoa.herokuapp.com/comments')
             .then(res=>{
                 return res.json();
             })
@@ -58,7 +58,7 @@ export const DataAsm = (props) => {
     // order
     const [adminOrder, setadminOrder] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3000/orders')
+        fetch('https://json-server-hkhoa.herokuapp.com/orders')
             .then(res=>{
                 return res.json();
             })

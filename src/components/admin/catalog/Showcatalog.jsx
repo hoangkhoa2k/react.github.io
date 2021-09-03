@@ -20,7 +20,7 @@ export default function Showcatalog(props) {
 
     const xoacatalog = (id) => {
         if (window.confirm("Bạn thực sự muốn xóa danh mục này?")) {
-            fetch(`http://localhost:3000/catalogs/${id}`,{
+            fetch(`https://json-server-hkhoa.herokuapp.com/catalogs/${id}`,{
                 method: 'DELETE',
                 headers: {
                     'Accept':'application/json',

@@ -8,7 +8,7 @@ export default function Category() {
     const [productss, setProductss] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:3000/products?idcate='+id)
+        fetch('https://json-server-hkhoa.herokuapp.com/products?idcate='+id)
             .then(res=>{
                 return res.json();
             })
@@ -47,7 +47,7 @@ export default function Category() {
             }
         })
         setLike([...like])
-        fetch(`http://localhost:3000/products/${id}`,{
+        fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
             method: 'PUT',
             headers: {
                 'Accept':'application/json',
@@ -63,7 +63,7 @@ export default function Category() {
                 gg.view+=1
             }
         })
-        fetch(`http://localhost:3000/products/${id}`,{
+        fetch(`https://json-server-hkhoa.herokuapp.com/products/${id}`,{
             method: 'PUT',
             headers: {
                 'Accept':'application/json',
