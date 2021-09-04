@@ -35,7 +35,7 @@ function App() {
     const dataUsers = JSON.parse(dataUser);
     return (
             <div className="App">
-                <Router>
+                <Router basename={window.location.pathname || ''}>
                     <Header/>
                     {/* <Slider/> */}
                     <section>
@@ -67,10 +67,11 @@ function App() {
                             <Route path="bieudothongke" element={ <Bieudothongke /> } />
                             <Route path="baocao" element={ <BaocaoASM /> } />
                             <Route path="timhinh" element={ <FormTimHinh /> } />
+                            <Route>Not Found</Route>
                         </Routes>
                         ) : (
                         <Routes>
-                            <Route path="/" element={ <Home /> } />
+                            <Route exact path="/" element={ <Home /> } />
                             <Route path="products" element={ <Products /> } />
                             <Route path="product-details/:id" element={ <Productdetails /> } />
                             <Route path="productlike" element={ <Productlike /> } />
@@ -94,6 +95,7 @@ function App() {
                             <Route path="bieudothongke" element={ <Login /> } />
                             <Route path="baocao" element={ <BaocaoASM /> } />
                             <Route path="timhinh" element={ <FormTimHinh /> } />
+                            <Route>Not Found</Route>
                         </Routes>
                     )}
                     </section>
