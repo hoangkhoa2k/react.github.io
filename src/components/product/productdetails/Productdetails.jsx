@@ -1,5 +1,5 @@
 import React,{useContext, useEffect, useState} from 'react'
-import {useParams} from 'react-router-dom'
+import {NavLink, useParams} from 'react-router-dom'
 import { DataContext } from '../../DataAsm';
 
 
@@ -127,16 +127,16 @@ export default function Productdetails() {
                                 </div>
                             </li>
 
-                            <li className="col-xs-6"> <a href="/cart" onClick={() => addCart(product.id)} className="btn">Thêm giỏ hàng</a> </li>
+                            <li className="col-xs-6"> <NavLink to="/cart" onClick={() => addCart(product.id)} className="btn">Thêm giỏ hàng</NavLink> </li>
                             </ul>
                             <div className="inner-info">
                             <h6>SHARE THIS PRODUCT</h6>
                             <ul className="social_icons">
-                                <li><a href="/"><i className="icon-social-facebook" /></a></li>
-                                <li><a href="/"><i className="icon-social-twitter" /></a></li>
-                                <li><a href="/"><i className="icon-social-tumblr" /></a></li>
-                                <li><a href="/"><i className="icon-social-youtube" /></a></li>
-                                <li><a href="/"><i className="icon-social-dribbble" /></a></li>
+                                <li><NavLink to="/"><i className="icon-social-facebook" /></NavLink></li>
+                                <li><NavLink to="/"><i className="icon-social-twitter" /></NavLink></li>
+                                <li><NavLink to="/"><i className="icon-social-tumblr" /></NavLink></li>
+                                <li><NavLink to="/"><i className="icon-social-youtube" /></NavLink></li>
+                                <li><NavLink to="/"><i className="icon-social-dribbble" /></NavLink></li>
                             </ul>
                             </div>
                         </div>
@@ -147,8 +147,8 @@ export default function Productdetails() {
                 </div>
                 <div className="item-decribe"> 
                 <ul className="nav nav-tabs animate fadeInUp" data-wow-delay="0.4s" role="tablist">
-                    <li role="presentation" className="active"><a href="#descr" role="tab" data-toggle="tab">Bình Luận</a></li>
-                    <li role="presentation"><a href="#review" role="tab" data-toggle="tab">Danh sách ý kiến</a></li>
+                    <li role="presentation" className="active"><NavLink to="#descr" role="tab" data-toggle="tab">Bình Luận</NavLink></li>
+                    <li role="presentation"><NavLink to="#review" role="tab" data-toggle="tab">Danh sách ý kiến</NavLink></li>
                 </ul>
                 <div className="tab-content animate fadeInUp" data-wow-delay="0.4s"> 
                     <div role="tabpanel" className="tab-pane fade in active" id="descr">
@@ -216,7 +216,7 @@ export default function Productdetails() {
                             comment.idsp === id ? (
                                 <div className="media">
                                     <div className="media-left"> 
-                                    <div className="avatar"> <a href="/"> <img className="media-object" src="../images/avatar-4.jpg" style={{width:"50px", height:"50px"}} alt="" /> </a> </div>
+                                    <div className="avatar"> <NavLink to="/"> <img className="media-object" src="./images/avatar-4.jpg" style={{width:"50px", height:"50px"}} alt="" /> </NavLink> </div>
                                     </div>
                                     <div className="media-body">
                                     <h6>{comment.Fullname} <span className="pull-right"> {comment.Date}</span> </h6>

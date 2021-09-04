@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import Showcatalog from './components/admin/catalog/Showcatalog';
 import Createcatalog from './components/admin/catalog/themxoasua/Createcatalog';
 import Inhd from './components/admin/order/Inhd';
@@ -27,7 +27,7 @@ import Login from './components/user/login/Login';
 import Profile from './components/user/profile/Profile';
 import Register from './components/user/register/Register';
 import Resetpass from './components/user/resetpass/Resetpass';
-import Slider from './components/layout/slider/Slider'
+// import Slider from './components/layout/slider/Slider'
 import FormTimHinh from './components/user/formtimhinh/FormTimHinh';
 
 function App() {
@@ -35,72 +35,70 @@ function App() {
     const dataUsers = JSON.parse(dataUser);
     return (
             <div className="App">
-                <Router basename={window.location.pathname || ''}>
-                    <Header/>
-                    {/* <Slider/> */}
-                    <section>
-                    {(dataUsers) ? (
-                        <Routes>
-                            <Route path="/" element={ <Home /> } />
-                            <Route path="products" element={ <Products /> } />
-                            <Route path="product-details/:id" element={ <Productdetails /> } />
-                            <Route path="productlike" element={ <Productlike /> } />
-                            <Route path="cart" element={ <Cart /> } />
-                            <Route path="checkout" element={ <Checkout /> } />
-                            <Route path="login" element={ <Home /> } />
-                            <Route path="register" element={ <Home /> } />
-                            <Route path="profile/:id" element={ <Profile /> } />
-                            <Route path="reset-password/:id" element={ <Resetpass /> } />
-                            <Route path="forgot-password" element={ <Home /> } />
-                            <Route path="contact" element={ <Contact /> } />
-                            <Route path="category/:id" element={ <Category /> } />
-                            <Route path="admin-catalogs" element={ <Showcatalog /> } />
-                            <Route path="create-catalogs" element={ <Createcatalog /> } />
-                            <Route path="admin-products" element={ <Showproduct /> } />
-                            <Route path="create-products" element={ <Createproduct /> } />
-                            <Route path="edit-products/:id" element={ <Editproduct /> } />
-                            <Route path="admin-users" element={ <Showuser /> } />
-                            <Route path="edit-users/:id" element={ <Edituser /> } />
-                            <Route path="admin-orders" element={ <Showorder /> } />
-                            <Route path="in-hoadon/:id" element={ <Inhd /> } />
-                            <Route path="bangthongke" element={ <Bangthongke /> } />
-                            <Route path="bieudothongke" element={ <Bieudothongke /> } />
-                            <Route path="baocao" element={ <BaocaoASM /> } />
-                            <Route path="timhinh" element={ <FormTimHinh /> } />
-                            <Route>Not Found</Route>
-                        </Routes>
-                        ) : (
-                        <Routes>
-                            <Route exact path="/" element={ <Home /> } />
-                            <Route path="products" element={ <Products /> } />
-                            <Route path="product-details/:id" element={ <Productdetails /> } />
-                            <Route path="productlike" element={ <Productlike /> } />
-                            <Route path="cart" element={ <Cart /> } />
-                            <Route path="checkout" element={ <Checkout /> } />
-                            <Route path="login" element={ <Login /> } />
-                            <Route path="register" element={ <Register /> } />
-                            <Route path="profile/:id" element={ <Login /> } />
-                            <Route path="reset-password/:id" element={ <Login /> } />
-                            <Route path="forgot-password" element={ <Forgotpass /> } />
-                            <Route path="contact" element={ <Contact /> } />
-                            <Route path="category/:id" element={ <Category /> } />
-                            <Route path="admin-products" element={ <Login /> } />
-                            <Route path="create-products" element={ <Login /> } />
-                            <Route path="edit-products/:id" element={ <Login /> } />
-                            <Route path="admin-users" element={ <Login /> } />
-                            <Route path="edit-users/:id" element={ <Login /> } />
-                            <Route path="admin-orders" element={ <Login /> } />
-                            <Route path="in-hoadon/:id" element={ <Login /> } />
-                            <Route path="bangthongke" element={ <Login /> } />
-                            <Route path="bieudothongke" element={ <Login /> } />
-                            <Route path="baocao" element={ <BaocaoASM /> } />
-                            <Route path="timhinh" element={ <FormTimHinh /> } />
-                            <Route>Not Found</Route>
-                        </Routes>
-                    )}
-                    </section>
-                    <Footer/>
-                </Router>
+                <Header/>
+                {/* <Slider/> */}
+                <section>
+                {(dataUsers) ? (
+                    <Switch>
+                        <Route exact path="/"><Home /></Route>
+                        <Route path="/products"><Products /></Route>
+                        <Route path="/product-details/:id"><Productdetails /></Route>
+                        <Route path="/productlike"><Productlike /></Route>
+                        <Route path="/cart"><Cart /></Route>
+                        <Route path="/checkout"><Checkout /></Route>
+                        <Route path="/login"><Home /></Route>
+                        <Route path="/register"><Home /></Route>
+                        <Route path="/profile/:id"><Profile /></Route>
+                        <Route path="/reset-password/:id"><Resetpass /></Route>
+                        <Route path="/forgot-password"><Home /></Route>
+                        <Route path="/contact"><Contact /></Route>
+                        <Route path="/category/:id"><Category /></Route>
+                        <Route path="/admin-catalogs"><Showcatalog /></Route>
+                        <Route path="/create-catalogs"><Createcatalog /></Route>
+                        <Route path="/admin-products"><Showproduct /></Route>
+                        <Route path="/create-products"><Createproduct /></Route>
+                        <Route path="/edit-products/:id"><Editproduct /></Route>
+                        <Route path="/admin-users"><Showuser /></Route>
+                        <Route path="/edit-users/:id"><Edituser /></Route>
+                        <Route path="/admin-orders"><Showorder /></Route>
+                        <Route path="/in-hoadon/:id"><Inhd /></Route>
+                        <Route path="/bangthongke"><Bangthongke /></Route>
+                        <Route path="/bieudothongke"><Bieudothongke /></Route>
+                        <Route path="/baocao"><BaocaoASM /></Route>
+                        <Route path="/timhinh"><FormTimHinh /></Route>
+                        <Route path="*">Not found</Route>
+                    </Switch>
+                    ) : (
+                    <Switch>
+                        <Route exact path="/"><Home /></Route>
+                        <Route path="/products"><Products /></Route>
+                        <Route path="/product-details/:id"><Productdetails /></Route>
+                        <Route path="/productlike"><Productlike /></Route>
+                        <Route path="/cart"><Cart /></Route>
+                        <Route path="/checkout"><Checkout /></Route>
+                        <Route path="/login"><Login /></Route>
+                        <Route path="/register"><Register /></Route>
+                        <Route path="/profile/:id"><Login /></Route>
+                        <Route path="/reset-password/:id"><Login /></Route>
+                        <Route path="/forgot-password"><Forgotpass /></Route>
+                        <Route path="/contact"><Contact /></Route>
+                        <Route path="/category/:id"><Category /></Route>
+                        <Route path="/admin-products"><Login /></Route>
+                        <Route path="/create-products"><Login /></Route>
+                        <Route path="/edit-products/:id"><Login /></Route>
+                        <Route path="/admin-users"><Login /></Route>
+                        <Route path="/edit-users/:id"><Login /></Route>
+                        <Route path="/admin-orders"><Login /></Route>
+                        <Route path="/in-hoadon/:id"><Login /></Route>
+                        <Route path="/bangthongke"><Login /></Route>
+                        <Route path="/bieudothongke"><Login /></Route>
+                        <Route path="/baocao"><BaocaoASM /></Route>
+                        <Route path="/timhinh"><FormTimHinh /></Route>
+                        <Route path="*">Not found</Route>
+                    </Switch>
+                )}
+                </section>
+                <Footer/>
             </div>
     );
 }

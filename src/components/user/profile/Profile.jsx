@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 export default function Profile(props) {
     const {id} = useParams()
@@ -18,7 +19,7 @@ export default function Profile(props) {
             <div className="main-body as1">
                 <nav aria-label="breadcrumb" className="main-breadcrumb">
                 <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                    <li className="breadcrumb-item"><NavLink to="/">Trang chủ</NavLink></li>
                     <li className="breadcrumb-item active" aria-current="page">Trang cá nhân</li>
                 </ol>
                 </nav>

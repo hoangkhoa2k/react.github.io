@@ -1,5 +1,6 @@
 import React,{useContext, useState, useEffect} from 'react'
 import { DataContext } from '../../DataAsm';
+import {NavLink} from 'react-router-dom';
 
 export default function Cart() {
     const value = useContext(DataContext)
@@ -106,7 +107,7 @@ export default function Cart() {
                     <ul className="row cart-details" key={product.id}>
                         <li className="col-sm-6">
                         <div className="media"> 
-                            <div className="media-left media-middle"> <a href="/" className="item-img"> <img className="media-object" src={`img/${product.images}`} alt="" style={{maxWidth: "135px"}} /> </a> </div>
+                            <div className="media-left media-middle"> <NavLink to="/" className="item-img"> <img className="media-object" src={`img/${product.images}`} alt="" style={{maxWidth: "135px"}} /> </NavLink> </div>
                             <div className="media-body">
                             <div className="position-center-center">
                                 <h5>{product.title}</h5>
@@ -147,7 +148,7 @@ export default function Cart() {
                 <div className="row"> 
                     <div className="col-sm-7">
                     <h6>tiện ích</h6>
-                    <div className="coupn-btn"> <a href="/" className="btn">Tiếp tục mua sắm</a> <a href="/checkout" className="btn">Thanh toán</a> </div>
+                    <div className="coupn-btn"> <NavLink to="/" className="btn">Tiếp tục mua sắm</NavLink> <NavLink to="/checkout" className="btn">Thanh toán</NavLink> </div>
                     </div>
                     <div className="col-sm-5">
                     <h6>tổng đơn hàng</h6>

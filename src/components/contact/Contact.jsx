@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Contact() {
     const sumds = ()=>{
@@ -53,7 +54,7 @@ export default function Contact() {
                         <li> <i className="icon-map-pin" /> Phường 12, Gò Vấp<br />
                             TP.HCM.</li>
                         <li> <i className="icon-call-end" />085 749 1449</li>
-                        <li> <i className="icon-envelope" /> <a href="/" target="_blank">khoa@gmail.com</a> </li>
+                        <li> <i className="icon-envelope" /> <NavLink to="/" target="_blank">khoa@gmail.com</NavLink> </li>
                         </ul>
                     </div>
                     </div>

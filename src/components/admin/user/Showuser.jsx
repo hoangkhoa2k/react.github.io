@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react';
 import { DataContext } from '../../DataAsm';
+import {NavLink} from 'react-router-dom';
 
 export default function Showuser() {
     const value = useContext(DataContext)
@@ -47,11 +48,11 @@ export default function Showuser() {
                     <div className="shop-sidebar"> 
                     <h5 className="shop-tittle margin-bottom-30">danh mục</h5>
                     <ul className="shop-cate">
-                        <li><a href="/admin-catalogs">Quản trị danh mục</a></li>
-                        <li><a href="/admin-products">Quản trị sản phẩm</a></li>
-                        <li><a href="/admin-users">Quản trị tài khoản</a></li>
-                        <li><a href="/admin-orders">Quản trị đơn hàng</a></li>
-                        <li><a href="/bangthongke">Thống kê</a></li>
+                        <li><NavLink to="/admin-catalogs">Quản trị danh mục</NavLink></li>
+                        <li><NavLink to="/admin-products">Quản trị sản phẩm</NavLink></li>
+                        <li><NavLink to="/admin-users">Quản trị tài khoản</NavLink></li>
+                        <li><NavLink to="/admin-orders">Quản trị đơn hàng</NavLink></li>
+                        <li><NavLink to="/bangthongke">Thống kê</NavLink></li>
                     </ul>
                     <div className="side-bnr margin-top-50"> <img className="img-responsive" src="images/sidebar-bnr.jpg" alt="" />
                         <div className="position-center-center"> <span className="price">1,999,000 VND</span>
@@ -69,7 +70,7 @@ export default function Showuser() {
                         <div className="col-xs-6"> <span className="product-num"> Quản trị tài khoản</span> </div>
                         <div className="col-xs-6">
                         <div className="pull-right"> 
-                            <a href="#." className="grid-style"><i className="icon-grid" /></a> <a href="#." className="list-style"><i className="icon-list" /></a> </div>
+                            <NavLink to="#." className="grid-style"><i className="icon-grid" /></NavLink> <NavLink to="#." className="list-style"><i className="icon-list" /></NavLink> </div>
                         </div>
                     </div>
                 </div>
@@ -102,9 +103,9 @@ export default function Showuser() {
                                             }
                                             {
                                                 (user.role)===0 ?(
-                                                    <td><a href={`/edit-users/${user.id}`}><button className="suaxoa" style={{borderRadius:"5px"}}>Sửa</button></a></td>
+                                                    <td><NavLink to={`/edit-users/${user.id}`}><button className="suaxoa" style={{borderRadius:"5px"}}>Sửa</button></NavLink></td>
                                                 ): (
-                                                    <td><a href={`/edit-users/${user.id}`}><button className="suaxoa" style={{borderRadius:"5px"}}>Sửa</button></a> <button className="suaxoa" onClick={()=>xoauser(user.id)} style={{borderRadius:"5px"}}>Xóa</button></td>
+                                                    <td><NavLink to={`/edit-users/${user.id}`}><button className="suaxoa" style={{borderRadius:"5px"}}>Sửa</button></NavLink> <button className="suaxoa" onClick={()=>xoauser(user.id)} style={{borderRadius:"5px"}}>Xóa</button></td>
                                                 )
                                             }
                                             

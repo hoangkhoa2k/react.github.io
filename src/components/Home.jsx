@@ -1,4 +1,5 @@
 import React, {useContext, useState} from 'react';
+import { NavLink } from 'react-router-dom';
 import { DataContext } from './DataAsm';
 
 // export default function Home() {
@@ -95,20 +96,20 @@ export default function Home(props) {
                             <div className="col-md-3" key={product.id}> 
                                 <div className={`item ${product.like}`}> 
                                     <div className="item-img">
-                                        <a href={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}> 
+                                        <NavLink to={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}> 
                                             <img className="img-1" src={`img/${product.images}`} alt="" />
-                                        </a>
+                                        </NavLink>
                                         <div className="overlay">
                                             <div className="position-center-center">
                                                 <div className="inn">
-                                                    <a href={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></a> 
+                                                    <NavLink to={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></NavLink> 
                                                     <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none"}} onClick={() => addCart(product.id)}><i className="icon-basket" /></button> 
                                                     <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none", padding:"10px"}} onClick={() => reductions(product.id)}><i className="icon-heart" /></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                <div className="item-name"> <a href={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</a></div>
+                                <div className="item-name"> <NavLink to={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</NavLink></div>
                                 <span className="price">{product.price.toLocaleString("en-GB")} VND</span></div>
                             </div>
                         ))            
@@ -145,20 +146,20 @@ export default function Home(props) {
                             <div className="col-md-3" key={product.id}> 
                                 <div className={`item ${product.like}`}> 
                                     <div className="item-img">
-                                        <a href={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}> 
+                                        <NavLink to={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}> 
                                             <img className="img-1" src={`img/${product.images}`} alt="" />
-                                        </a>
+                                        </NavLink>
                                         <div className="overlay">
                                             <div className="position-center-center">
                                                 <div className="inn">
-                                                    <a href={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></a> 
+                                                    <NavLink to={`img/${product.images}`} data-lighter><i className="icon-magnifier" /></NavLink> 
                                                     <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none"}} onClick={() => addCart(product.id)}><i className="icon-basket" /></button> 
                                                     <button style={{backgroundColor: "Transparent", backgroundRepeat: "no-repeat", border: "none", padding:"10px"}} onClick={() => reductions(product.id)}><i className="icon-heart" /></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                <div className="item-name"> <a href={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</a></div>
+                                <div className="item-name"> <NavLink to={`/product-details/${product.id}`} onClick={() => tangviews(product.id)}>{product.title}</NavLink></div>
                                 <span className="price">{product.price.toLocaleString("en-GB")} VND</span></div>
                             </div>
                         ))            

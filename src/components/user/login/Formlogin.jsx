@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Formlogin({Login}) {
     const [details, setDetails] = useState({Username: "", Email: "", Password: ""});
@@ -17,7 +18,7 @@ export default function Formlogin({Login}) {
                 <input className="input" type="text" placeholder="Username" name="Username" id="Username" onChange={e=>setDetails({...details, Username: e.target.value})} value={details.Username} /><br />
                 <label htmlFor="psw"><b>Mật khẩu:</b></label><br />
                 <input className="input" type="password" placeholder="Password" name="Password" id="Password" onChange={e=>setDetails({...details, Password: e.target.value})} value={details.Password} /><br />
-                <a href="/forgot-password">Quên mật khẩu?</a> <br />
+                <NavLink to="/forgot-password">Quên mật khẩu?</NavLink> <br />
                 <button type="submit"  className="button">Đăng nhập</button>
                 </div>
             </form>
