@@ -36,7 +36,7 @@ function App() {
     return (
             <div className="App">
                 <Header/>
-                {/* <Slider/> */}
+                <Slider/>
                 <section>
                 {(dataUsers) ? (
                     <Switch>
